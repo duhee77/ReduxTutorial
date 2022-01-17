@@ -21,13 +21,12 @@ const Home = ({ toDos, addToDo }) => {
         <input type="text" value={text} onChange={onChange} />
         <button>Add</button>
       </form>
-      <ul></ul>
+      <ul>{JSON.stringify(toDos)}</ul>
     </>
   )
 }
 
 function mapStateToProps(state) {
-  console.log(state)
   return { toDos: state }
 }
 
